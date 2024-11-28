@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoGaleriaFotos.MainPage">
+
+    <Grid RowDefinitions="*, Auto">
+        <ScrollView Grid.Row="0">
+            <CollectionView x:Name="FotoLista">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="#FFF">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </StackLayout.GestureRecognizers>
+                                <Image Source="{Binding Foto}" Aspect="AspectFit" Margin="5" />
+                                <Label Text="{Binding Comentario}" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       Margin="5" />
+                            </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+
+        <Button Text="Postar uma foto" x:Name="NovaFoto" Clicked="NovaFoto_Clicked" 
+                Grid.Row="1" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+    </Grid>
+
+</ContentPage>

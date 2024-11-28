@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoGaleriaFotos.AddFotos"
+             Title="Adicionar Fotos">
+    <ScrollView>
+        <VerticalStackLayout>
+            <StackLayout>
+                <Image x:Name="LdFoto" Aspect="AspectFit" />
+            </StackLayout>
+
+            <Button x:Name="tirarFoto" Text="Foto" Clicked="tirarFoto_Clicked" />
+
+            <Button x:Name="importarFoto" Text="Buscar foto" Clicked="importarFoto_Clicked"/>
+
+            <Entry x:Name="Descricao" Placeholder="Descrição" Margin="5" />
+
+            <Button Text="Salvar" x:Name="salvarFoto" Clicked="salvarFoto_Clicked" />
+
+            <Button Text="Voltar" x:Name="Voltar" Clicked="Voltar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
