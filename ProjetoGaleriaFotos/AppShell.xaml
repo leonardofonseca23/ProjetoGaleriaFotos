@@ -5,7 +5,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ProjetoGaleriaFotos"
     Shell.FlyoutBehavior="Disabled"
-    Title="ProjetoGaleriaFotos">
+    Title="ProjetoGaleriaFotos"
+    BackgroundColor="#F5F5F5"
+    Shell.TitleColor="Gray"
+    Shell.DisabledColor="#9E9E9E"
+    Shell.ForegroundColor="White"
+    Shell.TabBarBackgroundColor="#FFFFFF"
+    Shell.TabBarTitleColor="#4CAF50"
+    Shell.TabBarUnselectedColor="#757575">
 
     <ShellContent
         Title="Tela Inicial"
@@ -13,7 +20,7 @@
         Route="MainPage" />
 
     <ShellContent
-    Title="Adicionar fotos"
+    Title="Postar foto"
     ContentTemplate="{DataTemplate local:AddFotos}"
     Route="AddFotos" />
 

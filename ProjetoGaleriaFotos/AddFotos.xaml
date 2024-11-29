@@ -2,22 +2,59 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetoGaleriaFotos.AddFotos"
-             Title="Adicionar Fotos">
+             Title="Adicionar Fotos"
+             BackgroundColor="#F5F5F5">
+
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="15" Padding="20">
             <StackLayout>
                 <Image x:Name="LdFoto" Aspect="AspectFit" />
             </StackLayout>
 
-            <Button x:Name="tirarFoto" Text="Foto" Clicked="tirarFoto_Clicked" />
+            <Button x:Name="tirarFoto" 
+                    Text="Tirar Foto" 
+                    Clicked="tirarFoto_Clicked" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    FontAttributes="Bold" 
+                    CornerRadius="10"
+                    HeightRequest="50" />
 
-            <Button x:Name="importarFoto" Text="Buscar foto" Clicked="importarFoto_Clicked"/>
+            <Button x:Name="importarFoto" 
+                    Text="Buscar Foto" 
+                    Clicked="importarFoto_Clicked" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    FontAttributes="Bold" 
+                    CornerRadius="10"
+                    HeightRequest="50" />
 
-            <Entry x:Name="Descricao" Placeholder="Descrição" Margin="5" />
+            <Entry x:Name="Descricao" 
+                   Placeholder="Escreva um comentário" 
+                   Margin="0,10"
+                   BackgroundColor="White"
+                   TextColor="#424242"
+                   PlaceholderColor="#9E9E9E"
+                   FontSize="16"
+                   HeightRequest="50" />
 
-            <Button Text="Salvar" x:Name="salvarFoto" Clicked="salvarFoto_Clicked" />
+            <Button x:Name="salvarFoto" 
+                    Text="Postar" 
+                    Clicked="salvarFoto_Clicked" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    FontAttributes="Bold" 
+                    CornerRadius="10"
+                    HeightRequest="50" />
 
-            <Button Text="Voltar" x:Name="Voltar" Clicked="Voltar_Clicked" />
+            <Button x:Name="Voltar" 
+                    Text="Tela Inicial" 
+                    Clicked="Voltar_Clicked" 
+                    BackgroundColor="#757575" 
+                    TextColor="White" 
+                    FontAttributes="Bold" 
+                    CornerRadius="10"
+                    HeightRequest="50" />
 
         </VerticalStackLayout>
     </ScrollView>

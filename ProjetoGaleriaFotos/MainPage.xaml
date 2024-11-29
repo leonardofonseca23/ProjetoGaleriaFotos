@@ -5,25 +5,53 @@
 
     <Grid RowDefinitions="*, Auto">
         <ScrollView Grid.Row="0">
-            <CollectionView x:Name="FotoLista">
+            <CollectionView x:Name="FotoLista"
+                            Margin="10"
+                            BackgroundColor="#FFFFFF">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout BackgroundColor="#FFF">
+                        <Frame Padding="10" 
+                               Margin="5" 
+                               BorderColor="#E0E0E0" 
+                               BackgroundColor="#FFFFFF" 
+                               CornerRadius="10"
+                               HasShadow="True">
+                            <StackLayout BackgroundColor="#FFF">
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                             </StackLayout.GestureRecognizers>
-                                <Image Source="{Binding Foto}" Aspect="AspectFit" Margin="5" />
+                                <Label Text="{Binding DtPostagem}" 
+                                       FontSize="14" 
+                                       TextColor="#757575" 
+                                       HorizontalOptions="StartAndExpand"
+                                       Margin="0,0,0,5" />
+                                <Image Source="{Binding Foto}" 
+                                       Aspect="AspectFit" 
+                                       Margin="0,5,0,5" />
                                 <Label Text="{Binding Comentario}" 
+                                       FontSize="16" 
+                                       TextColor="#424242" 
                                        HorizontalOptions="CenterAndExpand" 
-                                       Margin="5" />
+                                       Margin="0,5,0,0" />
                             </StackLayout>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </ScrollView>
 
-        <Button Text="Postar uma foto" x:Name="NovaFoto" Clicked="NovaFoto_Clicked" 
-                Grid.Row="1" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+        <Button Text="Postar uma foto"
+                x:Name="NovaFoto"
+                Clicked="NovaFoto_Clicked"
+                Grid.Row="1"
+                VerticalOptions="End"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                FontAttributes="Bold"
+                HeightRequest="50"
+                Margin="10"
+                CornerRadius="10" />
     </Grid>
 
 </ContentPage>

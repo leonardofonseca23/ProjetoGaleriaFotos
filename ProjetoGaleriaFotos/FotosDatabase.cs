@@ -27,7 +27,7 @@ namespace ProjetoGaleriaFotos
         public async Task<List<Postagem>> GetItemsAsync()
         {
             await Init();
-            return await Database.Table<Postagem>().ToListAsync();
+            return await Database.Table<Postagem>().OrderByDescending(i => i.Id).ToListAsync();
         }
 
         public async Task<Postagem> GetItemAsync(int id)

@@ -24,15 +24,16 @@ namespace ProjetoGaleriaFotos
         public async void LdFotos()
         {
             List<Postagem> fotos = await fotosDatabase.GetItemsAsync();
+
             FotoLista.ItemsSource = new List<Postagem>(fotos);
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
         {
 
-            var acao = await DisplayActionSheet("O que você quer fazer?", "Voltar", "Excluir");
+            var acao = await DisplayActionSheet("Deseja excluir?", "Não", "Sim");
 
-            if (acao?.ToString() == "Excluir")
+            if (acao?.ToString() == "Sim")
             {
                 var tappedItem = ((StackLayout)sender).BindingContext;
 
